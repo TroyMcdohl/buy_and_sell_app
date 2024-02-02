@@ -6,9 +6,9 @@ import UserSlide from "@/app/components/User/UserSlide";
 const layout = ({ children }: { children: React.ReactNode }) => {
   const cookieStore = cookies();
 
-  const token = cookieStore.get("jwt")?.value!;
+  cookieStore.set("jwt", cookieStore.get("jwt")?.value!);
 
-  cookieStore.set("jwt", token);
+  const token = cookieStore.get("jwt")?.value!;
 
   return (
     <>

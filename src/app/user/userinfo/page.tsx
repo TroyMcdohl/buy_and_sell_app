@@ -30,8 +30,9 @@ const Page = async () => {
   const faUserIcon = faUser as IconProp;
 
   const cookieStore = cookies();
+  cookieStore.set("jwt", cookieStore.get("jwt")?.value!);
   const token = cookieStore.get("jwt")?.value!;
-  cookieStore.set("jwt", token);
+
   const decoded = jwt.verify(token, "the-dog-is-running-4-to-the-p0@l")!;
 
   const user = await getUser(decoded);

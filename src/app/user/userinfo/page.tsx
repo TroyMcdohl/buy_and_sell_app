@@ -31,7 +31,7 @@ const Page = async () => {
 
   const cookieStore = cookies();
   const token = cookieStore.get("jwt")?.value!;
-
+  cookieStore.set("jwt", token);
   const decoded = jwt.verify(token, "the-dog-is-running-4-to-the-p0@l")!;
 
   const user = await getUser(decoded);

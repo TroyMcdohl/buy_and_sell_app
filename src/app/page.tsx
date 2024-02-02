@@ -8,7 +8,7 @@ const Page = () => {
 
   useEffect(() => {
     router.replace("/user/products");
-  }, []);
+  }, [router]);
   return <div className=""></div>;
 };
 

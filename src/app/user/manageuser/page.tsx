@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { ChangeEvent, useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [users, setUsers] = useState<any>();
   useEffect(() => {
     const fetchData = async () => {
@@ -118,4 +118,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

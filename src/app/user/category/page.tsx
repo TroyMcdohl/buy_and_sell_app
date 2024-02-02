@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   const [client, setClient] = useState(false);
   const userData =
     typeof window !== "undefined" && JSON.parse(localStorage.getItem("user")!);
@@ -55,4 +55,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

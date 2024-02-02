@@ -48,7 +48,7 @@ const getQueryProducts = async (type: string) => {
   return resData;
 };
 
-const page = async ({
+const Page = async ({
   searchParams,
 }: {
   searchParams: {
@@ -115,4 +115,4 @@ const page = async ({
   );
 };
 
-export default page;
+export default Page;

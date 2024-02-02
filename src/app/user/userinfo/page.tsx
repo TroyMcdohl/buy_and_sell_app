@@ -26,7 +26,7 @@ const getUser = async (decoded: any) => {
   }
 };
 
-const page = async () => {
+const Page = async () => {
   const faUserIcon = faUser as IconProp;
 
   const cookieStore = cookies();
@@ -147,4 +147,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;

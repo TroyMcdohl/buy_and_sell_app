@@ -6,7 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   type inputVal = {
     oldPassword: string;
     newPassword: string;
@@ -200,4 +200,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

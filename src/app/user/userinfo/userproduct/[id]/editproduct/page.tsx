@@ -40,7 +40,7 @@ type paramsType = {
   };
 };
 
-const page = (props: paramsType) => {
+const Page = (props: paramsType) => {
   const router = useRouter();
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
@@ -304,4 +304,4 @@ const page = (props: paramsType) => {
   );
 };
 
-export default page;
+export default Page;

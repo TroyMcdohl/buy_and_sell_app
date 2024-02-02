@@ -5,7 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const page = ({ params }: { params: { id: string } }) => {
+const Page = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   const [oldPwd, setOldPwd] = useState<string>("");
   const [newPwd, setNewPwd] = useState<string>("");
@@ -161,4 +161,4 @@ const page = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default page;
+export default Page;

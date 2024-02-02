@@ -14,7 +14,7 @@ enum InputKind {
   PH_NUM = "PH_NUM",
 }
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [errMsg, setErrMsg] = useState("");
   const [loading, setLoading] = useState(false);
@@ -219,4 +219,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

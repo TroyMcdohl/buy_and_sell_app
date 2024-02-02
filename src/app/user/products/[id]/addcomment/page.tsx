@@ -10,7 +10,7 @@ type propType = {
   };
 };
 
-const page = (props: propType) => {
+const Page = (props: propType) => {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
@@ -87,4 +87,4 @@ const page = (props: propType) => {
   );
 };
 
-export default page;
+export default Page;

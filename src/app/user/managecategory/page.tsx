@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { ChangeEvent, useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [users, setUsers] = useState<any>();
   const [refresh, setRefresh] = useState(false);
   const router = useRouter();
@@ -109,4 +109,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

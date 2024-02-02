@@ -39,7 +39,7 @@ const getProducts = async (decoded: any) => {
   return resData;
 };
 
-const page = async (searchParams: any) => {
+const Page = async (searchParams: any) => {
   const cookieStore = cookies();
   const token = cookieStore.get("jwt")?.value!;
 
@@ -108,4 +108,4 @@ const page = async (searchParams: any) => {
   );
 };
 
-export default page;
+export default Page;

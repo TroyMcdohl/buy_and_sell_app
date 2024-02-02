@@ -6,7 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import LoadingCart from "@/app/components/User/LoadingCart";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [pwd, setPwd] = useState<string>("");
@@ -141,4 +141,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

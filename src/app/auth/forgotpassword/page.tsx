@@ -3,10 +3,8 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 
-const page = () => {
-  const router = useRouter();
+const Page = () => {
   const [email, setEmail] = useState<string>("");
 
   const [errMsg, setErrMsg] = useState("");
@@ -129,4 +127,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

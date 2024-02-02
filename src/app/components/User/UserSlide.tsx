@@ -32,20 +32,20 @@ const UserSlide: React.FC = async () => {
   const faMailIcon = faMailBulk as IconProp;
   let user;
 
-  // const cookieStore = cookies();
+  const cookieStore = cookies();
 
-  // const token = cookieStore.get("jwt")?.value!;
+  const token = cookieStore.get("jwt")?.value!;
 
-  // const notAuth = token == undefined || token == "logout";
+  const notAuth = token == undefined || token == "logout";
 
-  // const auth = token != undefined && token != "logout";
+  const auth = token != undefined && token != "logout";
 
-  // if (auth) {
-  //   const decoded: any = jwt.verify(token, "the-dog-is-running-4-to-the-p0@l")!;
-  //   const users = await getUser();
+  if (auth) {
+    const decoded: any = jwt.verify(token, "the-dog-is-running-4-to-the-p0@l")!;
+    const users = await getUser();
 
-  //   user = users.find((u: any) => u._id == decoded.id);
-  // }
+    user = users.find((u: any) => u._id == decoded.id);
+  }
 
   return (
     <div
@@ -59,7 +59,7 @@ const UserSlide: React.FC = async () => {
         <Link href={"/user/category"}>
           <li className=" cursor-pointer hover:text-blue-500 ">Category</li>
         </Link>
-        {/* {auth && (
+        {auth && (
           <>
             <Link href={"/user/userinfo"}>
               <li className=" cursor-pointer hover:text-blue-500 ">UserInfo</li>
@@ -90,7 +90,7 @@ const UserSlide: React.FC = async () => {
               <li className=" cursor-pointer hover:text-blue-500 ">Login</li>
             </Link>
           </>
-        )} */}
+        )}
       </ul>
     </div>
   );

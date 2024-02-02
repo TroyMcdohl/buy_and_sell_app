@@ -11,7 +11,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        domains: "buy-and-sell-app-api.vercel.app",
+        hostname: "buy-and-sell-app-api.vercel.app",
       },
       {
         protocol: "http",

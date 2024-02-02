@@ -10,7 +10,7 @@ const nextConfig = {
 
     remotePatterns: [
       {
-        protool: "https",
+        protocol: "https",
         domains: "buy-and-sell-app.vercel.app",
       },
       {

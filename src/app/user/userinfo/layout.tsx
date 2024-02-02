@@ -5,13 +5,8 @@ import UserSlide from "@/app/components/User/UserSlide";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   const cookieStore = cookies();
-  const token = cookieStore.get("jwt")?.value!;
 
-  //   if (token == undefined && token == "logout") {
-  //     return <div className="">Page not Found</div>;
-  //   } else {
-  //     return <div>{children} </div>;
-  //   }
+  const token = cookieStore.get("jwt")?.value!;
 
   return (
     <>

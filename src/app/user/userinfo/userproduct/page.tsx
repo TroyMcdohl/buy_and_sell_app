@@ -28,7 +28,6 @@ const getProducts = async (decoded: any) => {
   const res = await axios.get(
     "https://buy-and-sell-app-api.vercel.app/api/v1/products",
     {
-      headers: { "Set-Cookie": decoded },
       withCredentials: true,
     }
   );

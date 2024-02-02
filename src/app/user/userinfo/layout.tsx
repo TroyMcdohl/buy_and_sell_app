@@ -8,6 +8,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 
   const token = cookieStore.get("jwt")?.value!;
 
+  cookieStore.set("jwt", token);
+
   return (
     <>
       {token == undefined || token == "logout" ? (

@@ -17,9 +17,12 @@ const Page = () => {
   useEffect(() => {
     setClient(true);
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:8000/api/v1/category", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://buy-and-sell-app-api.vercel.app/api/v1/category",
+        {
+          withCredentials: true,
+        }
+      );
 
       setData(res.data.categories);
     };

@@ -61,7 +61,7 @@ const Page = (props: paramsType) => {
   useEffect(() => {
     const fetchData = async () => {
       const product = await axios.get(
-        `http://localhost:8000/api/v1/products/${props.params.id}`,
+        `https://buy-and-sell-app-api.vercel.app/api/v1/products/${props.params.id}`,
         {
           withCredentials: true,
         }
@@ -149,7 +149,7 @@ const Page = (props: paramsType) => {
 
     try {
       const res = await axios.patch(
-        `http://localhost:8000/api/v1/products/${props.params.id}`,
+        `https://buy-and-sell-app-api.vercel.app/api/v1/products/${props.params.id}`,
 
         form,
 
@@ -173,7 +173,7 @@ const Page = (props: paramsType) => {
     setDelLoading(true);
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/products/${props.params.id}`,
+        `https://buy-and-sell-app-api.vercel.app/api/v1/products/${props.params.id}`,
 
         {
           withCredentials: true,
@@ -220,7 +220,7 @@ const Page = (props: paramsType) => {
                 src={
                   file
                     ? file
-                    : `http://localhost:8000/public/img/product/${data.photo}`
+                    : `https://buy-and-sell-app-api.vercel.app/public/img/product/${data.photo}`
                 }
                 alt=""
                 className="object-cover w-[300px] h-[300px] bg-slate-700  rounded-sm my-2 sm:mx-2"

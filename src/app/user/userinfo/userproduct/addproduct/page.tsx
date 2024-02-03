@@ -50,9 +50,12 @@ const Page = () => {
   //   Category List
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:8000/api/v1/category", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://buy-and-sell-app-api.vercel.app/api/v1/category",
+        {
+          withCredentials: true,
+        }
+      );
 
       setCate(res.data.categories);
     };
@@ -138,7 +141,7 @@ const Page = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/products/`,
+        `https://buy-and-sell-app-api.vercel.app/api/v1/products/`,
 
         form,
 

@@ -9,10 +9,13 @@ import ReviewCard from "@/app/components/User/ReviewCard";
 //props.params && searchParams find param and query
 
 const getProduct = async (id: string) => {
-  const res = await fetch(`http://localhost:8000/api/v1/products/${id}`, {
-    credentials: "include",
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://buy-and-sell-app-api.vercel.app/api/v1/products/${id}`,
+    {
+      credentials: "include",
+      cache: "no-store",
+    }
+  );
 
   const resData = await res.json();
 
@@ -49,7 +52,7 @@ export default async function page(props: {
           <div className="w-[80%] h-[70%] shadow-lg flex flex-col justify-center items-center">
             <Image
               alt=""
-              src={`http://localhost:8000/public/img/product/${product.photo}`}
+              src={`https://buy-and-sell-app-api.vercel.app/public/img/product/${product.photo}`}
               className=" w-[90%] h-[80%]"
               height={500}
               width={500}

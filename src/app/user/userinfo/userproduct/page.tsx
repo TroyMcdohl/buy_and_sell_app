@@ -25,9 +25,12 @@ type productProp = {
 };
 
 const getProducts = async (decoded: any) => {
-  const res = await axios.get("http://localhost:8000/api/v1/products", {
-    withCredentials: true,
-  });
+  const res = await axios.get(
+    "https://buy-and-sell-app-api.vercel.app/api/v1/products",
+    {
+      withCredentials: true,
+    }
+  );
 
   const resData = res.data.products.filter(
     (p: any) => p.user._id == decoded.id

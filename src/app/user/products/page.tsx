@@ -23,9 +23,12 @@ type productProp = {
 };
 
 const getProducts = async () => {
-  const res = await axios.get("http://localhost:8000/api/v1/products/", {
-    withCredentials: true,
-  });
+  const res = await axios.get(
+    "https://buy-and-sell-app-api.vercel.app/api/v1/products/",
+    {
+      withCredentials: true,
+    }
+  );
 
   const resData = res.data.products;
 
@@ -34,7 +37,7 @@ const getProducts = async () => {
 
 const getQueryProducts = async (type: string) => {
   const res = await axios.get(
-    `http://localhost:8000/api/v1/products?type=${type}`,
+    `https://buy-and-sell-app-api.vercel.app/api/v1/products?type=${type}`,
     {
       withCredentials: true,
     }

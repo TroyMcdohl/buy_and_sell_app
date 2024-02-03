@@ -139,7 +139,7 @@ const Page = () => {
 
     try {
       const res = await axios.patch(
-        "http://localhost:8000/api/v1/users/updateme",
+        "https://buy-and-sell-app-api.vercel.app/api/v1/users/updateme",
 
         form,
 
@@ -186,7 +186,7 @@ const Page = () => {
                 src={
                   file
                     ? file
-                    : `http://localhost:8000/public/img/users/${state.photo}`
+                    : `https://buy-and-sell-app-api.vercel.app/public/img/users/${state.photo}`
                 }
                 alt=""
                 className="object-cover w-[300px] h-[300px] bg-slate-700  rounded-full mx-2"

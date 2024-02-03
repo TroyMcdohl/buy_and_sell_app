@@ -13,13 +13,10 @@ import { cookies } from "next/headers";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 
-const getUser = async (decoded: any) => {
+const getUser = async () => {
   const res = await axios.get(
     "https://buy-and-sell-app-api.vercel.app/api/v1/users",
     {
-      headers: {
-        Cookie: decoded,
-      },
       withCredentials: true,
     }
   );
@@ -45,7 +42,7 @@ const UserSlide: React.FC = async () => {
 
   if (auth) {
     const decoded: any = jwt.verify(token, "the-dog-is-running-4-to-the-p0@l")!;
-    const users = await getUser(cookieStore.get("jwt")?.value!);
+    const users = await getUser();
 
     user = users.find((u: any) => u._id == decoded.id);
   }

@@ -79,7 +79,7 @@ const Page = () => {
     try {
       setLoading(true);
       await axios.patch(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/users/updatepassword",
+        "http://localhost:8000/api/v1/users/updatepassword",
         {
           oldPassword: state.oldPassword,
           newPassword: state.newPassword,

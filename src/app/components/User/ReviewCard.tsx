@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 const reviewData = async (params: string) => {
   try {
     const res = await fetch(
-      `https://buy-and-sell-app-api.vercel.app/api/v1/products/${params}/rating`
+      `http://localhost:8000/api/v1/products/${params}/rating`
     );
 
     const resData = await res.json();

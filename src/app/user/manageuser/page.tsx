@@ -6,12 +6,9 @@ const Page = () => {
   const [users, setUsers] = useState<any>();
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/users",
-        {
-          withCredentials: true,
-        }
-      );
+      const res = await axios.get("http://localhost:8000/api/v1/users", {
+        withCredentials: true,
+      });
 
       setUsers(res.data.users);
     };
@@ -65,7 +62,7 @@ const Page = () => {
                   id=""
                   onChange={async (e) => {
                     const res = await axios.patch(
-                      `https://buy-and-sell-app-api.vercel.app/api/v1/users/updateuser/${u._id}`,
+                      `http://localhost:8000/api/v1/users/updateuser/${u._id}`,
                       {
                         role: e.target.value,
                       },

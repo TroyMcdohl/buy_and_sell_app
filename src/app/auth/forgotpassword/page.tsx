@@ -24,7 +24,7 @@ const Page = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/users/forgotpassword",
+        "http://localhost:8000/api/v1/users/forgotpassword",
         {
           email,
         },

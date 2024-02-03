@@ -14,12 +14,9 @@ import axios from "axios";
 import jwt from "jsonwebtoken";
 
 const getUser = async () => {
-  const res = await axios.get(
-    "https://buy-and-sell-app-api.vercel.app/api/v1/users",
-    {
-      withCredentials: true,
-    }
-  );
+  const res = await axios.get("http://localhost:8000/api/v1/users", {
+    withCredentials: true,
+  });
 
   return res.data.users;
 };

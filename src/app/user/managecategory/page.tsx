@@ -9,12 +9,9 @@ const Page = () => {
   const router = useRouter();
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/category",
-        {
-          withCredentials: true,
-        }
-      );
+      const res = await axios.get("http://localhost:8000/api/v1/category", {
+        withCredentials: true,
+      });
 
       setUsers(res.data.categories);
     };
@@ -55,7 +52,7 @@ const Page = () => {
                 <button
                   onClick={async () => {
                     const res = await axios.delete(
-                      `https://buy-and-sell-app-api.vercel.app/api/v1/category/${u._id}`,
+                      `http://localhost:8000/api/v1/category/${u._id}`,
                       {
                         withCredentials: true,
                       }

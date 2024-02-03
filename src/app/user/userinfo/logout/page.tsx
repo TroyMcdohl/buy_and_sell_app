@@ -8,7 +8,7 @@ const Page = () => {
   const router = useRouter();
   const logoutHandler = async () => {
     const res = await axios.patch(
-      "https://buy-and-sell-app-api.vercel.app/api/v1/users/logout",
+      "http://localhost:8000/api/v1/users/logout",
       {},
       {
         withCredentials: true,

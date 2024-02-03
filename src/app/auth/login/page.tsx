@@ -10,7 +10,7 @@ const Page = () => {
   const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [pwd, setPwd] = useState<string>("");
-  const [errMsg, setErrMsg] = useState("");
+  const [errMsg, setErrMsg] = useState();
   const [loading, setLoading] = useState(false);
 
   const changeHandler = (
@@ -30,7 +30,7 @@ const Page = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/users/login",
+        "http://localhost:8000/api/v1/users/login",
         {
           email,
           password: pwd,
@@ -53,7 +53,7 @@ const Page = () => {
       setLoading(false);
       setErrMsg(error.response.data.message);
       setTimeout(() => {
-        setErrMsg("");
+        setErrMsg(undefined);
       }, 2000);
     }
   };

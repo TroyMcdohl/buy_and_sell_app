@@ -31,7 +31,7 @@ const Page = (props: propType) => {
     }
     try {
       const res = await axios.post(
-        `https://buy-and-sell-app-api.vercel.app/api/v1/category`,
+        `http://localhost:8000/api/v1/category`,
         {
           name: text,
         },

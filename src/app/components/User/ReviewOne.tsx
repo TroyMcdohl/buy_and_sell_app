@@ -27,7 +27,7 @@ const ReviewOne = (props: props) => {
     try {
       setLoading(true);
       const res = await axios.delete(
-        `https://buy-and-sell-app-api.vercel.app/api/v1/products/${props.productId}/rating/${props.review._id}`,
+        `http://localhost:8000/api/v1/products/${props.productId}/rating/${props.review._id}`,
 
         {
           withCredentials: true,
@@ -83,7 +83,7 @@ const ReviewOne = (props: props) => {
       >
         <div className="flex items-center">
           <Image
-            src={`https://buy-and-sell-app-api.vercel.app/public/img/users/${props.review.user.photo}`}
+            src={`http://localhost:8000/public/img/users/${props.review.user.photo}`}
             alt=""
             className="w-[50px] h-[50px] rounded-full mx-2"
             width={50}

@@ -76,7 +76,7 @@ const Page = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://buy-and-sell-app-api.vercel.app/api/v1/users/register",
+        "http://localhost:8000/api/v1/users/register",
         {
           name: data.name,
           email: data.email,

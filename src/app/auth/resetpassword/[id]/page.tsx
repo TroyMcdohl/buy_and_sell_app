@@ -29,7 +29,7 @@ const Page = ({ params }: { params: { id: string } }) => {
     try {
       setLoading(true);
       const res = await axios.patch(
-        `https://buy-and-sell-app-api.vercel.app/api/v1/users/resetpassword/${params.id}`,
+        `http://localhost:8000/api/v1/users/resetpassword/${params.id}`,
         {
           newPassword: newPwd,
           confirmPassword: pwd,

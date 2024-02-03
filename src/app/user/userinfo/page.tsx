@@ -11,12 +11,9 @@ import axios from "axios";
 
 const getUser = async (decoded: any) => {
   try {
-    const res = await axios.get(
-      "https://buy-and-sell-app-api.vercel.app/api/v1/users",
-      {
-        withCredentials: true,
-      }
-    );
+    const res = await axios.get("http://localhost:8000/api/v1/users", {
+      withCredentials: true,
+    });
 
     const user = res.data.users.find((u: any) => u._id == decoded.id);
 
@@ -58,7 +55,7 @@ const Page = async () => {
           <div className="sm:w-1/2 w-[90%] mx-auto sm:my-3 flex  flex-col justfiy-center items-center">
             <Image
               className=" object-cover sm:w-[300px] w-[250px] h-[250px] sm:h-[300px] bg-slate-700  rounded-full my-2 sm:mx-2"
-              src={`https://buy-and-sell-app-api.vercel.app/public/img/users/${user.photo}`}
+              src={`http://localhost:8000/public/img/users/${user.photo}`}
               alt=""
               width={300}
               height={300}

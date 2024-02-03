@@ -30,7 +30,7 @@ const ProductCard = (props: productProp) => {
           <div className="flex mx-2 justify-center items-center">
             <Image
               className=" object-cover w-[50px] h-[50px] bg-slate-700 rounded-full mx-2"
-              src={`https://buy-and-sell-app-api.vercel.app/public/img/users/${props.user.photo}`}
+              src={`http://localhost:8000/public/img/users/${props.user.photo}`}
               alt=""
               width={50}
               height={50}
@@ -47,7 +47,7 @@ const ProductCard = (props: productProp) => {
         <div className="h-4/6 ">
           <Image
             className="mx-auto w-[90%] h-full"
-            src={`https://buy-and-sell-app-api.vercel.app/public/img/product/${props.photo}`}
+            src={`http://localhost:8000/public/img/product/${props.photo}`}
             alt=""
             width={500}
             height={500}

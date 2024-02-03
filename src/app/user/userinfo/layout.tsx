@@ -10,14 +10,14 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      {/* {token == undefined || token == "logout" ? (
+      {token == undefined || token == "logout" ? (
         notFound()
-      ) : ( */}
-      <>
-        <UserSlide />
-        <div className="">{children}</div>
-      </>
-      {/* )} */}
+      ) : (
+        <>
+          <UserSlide />
+          <div className="">{children}</div>
+        </>
+      )}
     </>
   );
 };

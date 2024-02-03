@@ -1,6 +1,7 @@
 "use client";
 import UserSlide from "@/app/components/User/UserSlide";
 import axios from "axios";
+import { setCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -14,6 +15,9 @@ const Page = () => {
         withCredentials: true,
       }
     );
+
+    setCookie("jwt", "logout");
+
     router.replace("/user/products");
     router.refresh();
     localStorage.removeItem("user");

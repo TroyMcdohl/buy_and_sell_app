@@ -4,9 +4,8 @@ import { notFound } from "next/navigation";
 import UserSlide from "@/app/components/User/UserSlide";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const cookieStore = cookies();
-
-  const token = cookieStore.get("jwt")?.value!;
+  const getCookie = cookies();
+  const token = getCookie.get("jwt")?.value;
 
   return (
     <>

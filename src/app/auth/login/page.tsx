@@ -5,6 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import LoadingCart from "@/app/components/User/LoadingCart";
+import { setCookie } from "cookies-next";
 
 const Page = () => {
   const router = useRouter();
@@ -44,6 +45,10 @@ const Page = () => {
       const resData = await res;
 
       const userData = JSON.stringify(resData.data.user);
+
+      setCookie("jwt", res.data.token, {
+        expires: new Date(Date.now() + 24 * 3600 * 1000),
+      });
 
       localStorage.setItem("user", userData);
 

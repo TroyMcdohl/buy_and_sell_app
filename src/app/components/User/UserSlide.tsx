@@ -33,7 +33,7 @@ const UserSlide: React.FC = async () => {
 
   const token = cookieStore.get("jwt")?.value!;
 
-  console.log(token);
+  
 
   const notAuth = token == undefined || token == "logout";
 

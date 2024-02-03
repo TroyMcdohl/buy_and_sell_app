@@ -17,6 +17,7 @@ const getUser = async () => {
   const res = await axios.get(
     "https://buy-and-sell-app-api.vercel.app/api/v1/users",
     {
+      headers: { Cookie: cookies().toString() },
       withCredentials: true,
     }
   );
